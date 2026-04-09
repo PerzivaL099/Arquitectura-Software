@@ -1,0 +1,16 @@
+package PatronFabrica;
+
+public class Main {
+    public static void main(String[] args) {
+        PizzaStore nyStore = new NYPizzaStore();
+        PizzaStore chicagoStore = new ChicagoPizzaStore();
+
+        System.out.println("========== NEW YORK STORE ==========");
+        Pizza pizza = nyStore.orderPizza("cheese");
+        System.out.println("Ethan ordered a " + pizza.getName() + "\n");
+
+        System.out.println("========== CHICAGO STORE ==========");
+        pizza = chicagoStore.orderPizza("cheese");
+        System.out.println("Joel ordered a " + pizza.getName() + "\n");
+    }
+}
